@@ -1,0 +1,30 @@
+﻿@model IEnumerable<DBFirst.Models.Teacher>
+
+@{
+    ViewData["Title"] = "In";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<h1>In Database </h1>
+
+<style>
+    span{
+        color:brown;
+        font-weight:900
+        
+    } 
+
+</style>
+
+@foreach (var item in Model)
+{
+    <span><p> Name &nbsp; : &nbsp;  @item.name</p></span>
+    <span><p>ID    &nbsp; : &nbsp;  @item.id</p></span>
+    <span><p>Email &nbsp; : &nbsp;  @item.email</p></span>
+    <span><p>Subject &nbsp; : &nbsp;@item.subject</p></span>
+
+    <p>=================================</p>
+}
+<a asp-controller="Home" asp-action="Logout" class="btn btn-outline-success btn-group-lg" >Logout</a>
